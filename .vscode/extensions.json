@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "heybourn.headwind",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "burkeholland.simple-react-snippets",
+    "bradlc.vscode-tailwindcss",
+    "austenc.tailwind-docs"
+  ]
+}
