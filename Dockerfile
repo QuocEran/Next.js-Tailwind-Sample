@@ -6,7 +6,7 @@ LABEL author="QuocEran <quocchuong45@gmail.com>"
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN apk add --no-cache git \
-    && yarn install --frozen-lockfile \
+    && yarn install --frozen-lockfile --ignore-scripts \
     && yarn cache clean
 
 # Build Image

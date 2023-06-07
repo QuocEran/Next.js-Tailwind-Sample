@@ -1,14 +1,40 @@
 version: "3.9" #This denotes that we are using version 3 of Docker Compose
 services: #This section defines all the different containers we will create.
-  next-tailwind-ts: #This is the name of our Nextjs application.
+  prod-web: #This is the name of our Nextjs application.
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: next-tailwind-ts
-    image: next-tailwind-ts
+    container_name: prod-web
+    image: prod-web
+    profiles: ["prod"]
     ports:
-      - "3001:3000"
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
 
+  preprod-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: preprod-web
+    image: preprod-web
+    profiles: ["preprod"]
+    ports:
+      - "3301:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  staging-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: staging-web
+    image: staging-web
+    profiles: ["staging"]
+    ports:
+      - "3301:3000"
     env_file:
       - .env
     restart: unless-stopped
