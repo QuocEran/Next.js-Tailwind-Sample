@@ -31,7 +31,6 @@ function SocialShare(props: Props) {
         <FacebookShareButton url={url}>
           <FacebookIcon round size={32} />
         </FacebookShareButton>
-
         <LinkedinShareButton url={url}>
           <LinkedinIcon round size={32} />
         </LinkedinShareButton>
