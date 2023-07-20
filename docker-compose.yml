@@ -10,7 +10,7 @@ services: #This section defines all the different containers we will create.
     ports:
       - "3000:3000"
     env_file:
-      - .env
+      - .env.prod
     restart: unless-stopped
 
   preprod-web:
@@ -23,7 +23,7 @@ services: #This section defines all the different containers we will create.
     ports:
       - "3301:3000"
     env_file:
-      - .env
+      - .env.preprod
     restart: unless-stopped
 
   staging-web:
