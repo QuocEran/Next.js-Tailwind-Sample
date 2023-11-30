@@ -52,7 +52,13 @@
   }
 }
 
+@font-face {
+  font-family: "Lexend Deca", sans-serif;
+  src: url("/public/font/LexendDeca-VariableFont_wght.ttf");
+}
+
 * {
+  font-family: "Lexend Deca", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;

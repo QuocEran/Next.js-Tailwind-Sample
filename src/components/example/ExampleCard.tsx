@@ -1,7 +1,3 @@
-import { Inter } from "@next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
 interface Props {
   href: string;
   title: string;
@@ -16,8 +12,8 @@ const ExampleCard = (props: Props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <h2 className={`${inter.className} font-semibold mb-3`}>{props.title}</h2>
-      <p className={`${inter.className} m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>{props.description}</p>
+      <h2 className={`font-semibold mb-3`}>{props.title}</h2>
+      <p className={`m-0 opacity-60 text-[0.9rem] leading-6 max-w-[30ch]`}>{props.description}</p>
     </a>
   );
 };
